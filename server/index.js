@@ -18,8 +18,18 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log('User just disconnected');
     });
+    socket.on('error', (err) => {
+        console.error('Socket error:', err);
+    });
 });
 
-server.listen(3000, () => {
-    console.log('Server on port 3000');
+server.on('error', (err) => {
+    console.error('Server error:', err);
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+}).on('error', (err) => {
+    console.error('Failed to start server:', err);
 });
