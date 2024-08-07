@@ -2,8 +2,6 @@ const socket = io();
 
 
 
-
-
 let allMessages = document.getElementById('chat-messages');
 
 document.getElementById('form').addEventListener('submit', sendMessage);
