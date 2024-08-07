@@ -1,24 +1,30 @@
 const socket = io();
 
-let form = document.getElementById('form');
 
-let input = document.getElementById('input');
+
+
 
 let allMessages = document.getElementById('chat-messages');
 
-form.addEventListener('submit', (e) => {
+document.getElementById('form').addEventListener('submit', sendMessage);
+
+function sendMessage (e){
     e.preventDefault();
+    let input = document.getElementById('input');
     if (input.value) {
         
         socket.emit('message instance', input.value);
         input.value = '';
 
     }
-});
+    input.focus();
+}
 
-socket.on('message instance', (msg) => {
+
+
+socket.on('message instance', (message) => {
     let messageContent= document.createElement('li');
-    messageContent.innerText = msg;
+    messageContent.innerText = message;
     allMessages.appendChild(messageContent);
   
 });

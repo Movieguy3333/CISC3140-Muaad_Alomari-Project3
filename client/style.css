@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(1, 39, 15);
+    background-color: rgb(1, 46, 18);
     
 }
 
@@ -26,7 +26,7 @@ body {
 }
 
 
-.header {
+header {
     background-image: linear-gradient(to bottom right, rgb(0, 191, 13), rgb(14, 143, 0));
     color: #fff;
     padding: 3px;
@@ -47,7 +47,7 @@ body {
 }
 
 
-.form {
+form {
     display: flex;
     padding: 10px;
     border-top: 1px solid #007bff;
@@ -56,7 +56,7 @@ body {
 }
 
 
-.input {
+input {
     flex: 1;
     padding: 10px;
     border: 1px solid #ced4da;
@@ -68,7 +68,7 @@ body {
 }
 
 
-.button {
+button {
     padding: 10px 20px;
     border: none;
     background-color: #007bff;
@@ -80,13 +80,13 @@ body {
 }
 
 
-.button:hover {
+button:hover {
     background-color: #0056b3;
    
 }
 
 
-#chat-messages li {
+li {
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 15px;
@@ -98,8 +98,3 @@ body {
 }
 
 
-#chat-messages li.chat-message {
-    background-color: #007bff;
-    color: #fff;
-    align-self: flex-end;
-}

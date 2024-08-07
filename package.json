@@ -79,7 +79,7 @@
     "ws": "^8.17.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devStart": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
