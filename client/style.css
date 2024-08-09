@@ -13,6 +13,7 @@ body {
 
 
 .chat {
+ 
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -37,7 +38,7 @@ header {
 
 
 #chat-messages {
-   
+    flex:1;
 
     padding: 20px;
     background-color: #f8f9fa;
@@ -63,7 +64,7 @@ input {
     font-size: 16px;
     outline: none;
     margin-right: 10px;
-    
+
 }
 
 
